@@ -30,19 +30,19 @@ fun cuadrado(numero: Int): Int {
 }
 
 fun contarCaracteres(texto: String): Int {
-    TODO("Contar caracteres del string")
+    return texto.length
 }
 
 fun String.cuentaCaracteres(): Int {
-    TODO("Extension para contar caracteres de un String")
+    return contarCaracteres(texto = this)
 }
 
 infix fun Int.esMayorQue(otro: Int): Boolean {
-    TODO("Funcion infix para comparar numeros")
+    return this > otro
 }
 
 fun sumarTodos(vararg numeros: Int): Int {
-    TODO("Sumar todos los numeros pasados como varargs")
+    return numeros.sum()
 }
 
 fun aplicarOperacion(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {

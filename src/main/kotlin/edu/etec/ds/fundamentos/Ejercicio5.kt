@@ -1,27 +1,53 @@
 package edu.etec.ds.fundamentos
 
 fun sumarHasta(n: Int): Int {
-    TODO("Sumar todos los numeros desde 1 hasta n (inclusive)")
+    var acumulador = 0
+    for (i in 0..n){
+        acumulador += i
+    }
+    return acumulador
 }
 
 fun contarPares(inicio: Int, fin: Int): Int {
-    TODO("Contar numeros pares en el rango [inicio, fin]")
+    var contador = 0
+    for (i in inicio..fin){
+        if (i % 2 == 0){
+            contador++
+        }
+    }
+    return contador
 }
 
 fun fibonacci(n: Int): Int {
-    TODO("Retornar el n-esimo numero de Fibonacci")
+    if (n<=1) return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
 }
 
 fun factorial(n: Int): Int {
-    TODO("Calcular el factorial de n")
+    var resultado = 1
+    for (i in 1..n){
+        resultado*=i
+    }
+    return resultado
 }
-
 fun encontrarMaximo(numeros: List<Int>): Int {
-    TODO("Encontrar el valor maximo en la lista")
+    var maximo = numeros[0]
+    for (numero in numeros){
+        if (numero > maximo){
+            maximo = numero
+        }
+    }
+    return maximo
 }
 
 fun encontrarMinimo(numeros: List<Int>): Int {
-    TODO("Encontrar el valor minimo en la lista")
+    var minimo = numeros[0]
+    for (numero in numeros){
+        if (numero < minimo){
+            minimo = numero
+        }
+    }
+    return minimo
 }
 
 fun sumarLista(numeros: List<Int>): Int {
