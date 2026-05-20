@@ -51,21 +51,37 @@ fun encontrarMinimo(numeros: List<Int>): Int {
 }
 
 fun sumarLista(numeros: List<Int>): Int {
-    TODO("Sumar todos los elementos de la lista")
+    var suma = 0
+    for (numero in numeros) {
+        suma += numero
+    }
+    return suma
 }
 
 fun inverter(texto: String): String {
-    TODO("Invertir la cadena de texto")
+    return texto.reversed()
 }
 
 fun contarVocales(texto: String): Int {
-    TODO("Contar las vocales en el texto (considerar mayusculas y minusculas)")
+    var contador = 0
+    for (letra in texto) {
+        if (letra in "aeiouAEIOU") {
+            contador++
+        }
+    }
+    return contador
 }
 
 fun esPalindromo(texto: String): Boolean {
-    TODO("Verificar si el texto es un palindromo (ignorando espacios)")
+    val textosinespacio = texto.filter { !it.isWhitespace() }
+    return textosinespacio.reversed() == textosinespacio
 }
 
 fun tablaMultiplicar(numero: Int): List<Int> {
-    TODO("Retornar lista con la tabla de multiplicar del 1 al 10")
+    val lista = 1..10
+    val tabla = mutableListOf<Int>()
+    for (i in lista){
+        tabla.add(i*numero)
+    }
+    return tabla
 }
